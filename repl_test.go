@@ -8,7 +8,7 @@ func TestCleanInput(t *testing.T) {
 		expected	[]string
 	}{
 		{
-			input: "    hello world    ",
+			input: "    Hello World    ",
 			expected: []string{"hello", "world"},
 		},
 		// {
@@ -16,19 +16,19 @@ func TestCleanInput(t *testing.T) {
 		// 	expected: []string{"hello", "world"},
 		// },
 		{
-			input: "    hello world     ",
+			input: "    heLLo worLd     ",
 			expected: []string{"hello", "world"},
 		},
 		{
-			input: "    hello world",
+			input: "    HELLO world",
 			expected: []string{"hello", "world"},
 		},
 		{
-			input: "hello world    ",
+			input: "HELLO world    ",
 			expected: []string{"hello", "world"},
 		},
 		{
-			input: "hello-world",
+			input: "hellO-world",
 			expected: []string{"hello-world"},
 		},
 	}
