@@ -8,10 +8,10 @@ import (
 )
 
 func startRepl() {
+	s := bufio.NewScanner(os.Stdin)
 	for ;; {
 		fmt.Print("pokedex> ")
 
-		s := bufio.NewScanner(os.Stdin)
 		s.Scan()
 
 		if s.Err() != nil {
